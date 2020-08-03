@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validator</title>
+  <link rel="stylesheet" href="fonts/stylesheet.css">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <div class="container flex justify-center items-center">
+    <div class="form-card bg-white shadow-xl rounded px-8 pt-6 pb-8 md:mt-40 w-full sm:w-2/5 lg:w-2/6">
+      <h1 class="text-3xl text-center mb-4">Form Validator</h1>
+      <form>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            Username
+          </label>
+          <input class="user-input appearance-none border rounded mb-3 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" id="username" type="text" placeholder="Username" autocomplete="username">
+          <p class="username-error d-none text-red-500 text-xs italic">Username must be at least 3 characters.</p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="user-email appearance-none border rounded mb-3 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" id="email" type="text" placeholder="one@two.com" required>
+          <p class="email-error d-none text-red-500 text-xs italic">Email is not valid.</p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Password
+          </label>
+          <input class="user-password appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none" id="password" type="password" placeholder="******" autocomplete="new-password">
+          <p class="password-error d-none text-red-500 text-xs italic">Password must be at least 6 characters.</p>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">
+            Password
+          </label>
+          <input class="user-confirm appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none" id="confirm-password" type="password" placeholder="******" autocomplete="new-password">
+          <p class="match-error d-none text-red-500 text-xs italic">Passwords do not match.</p>
+        </div>
+        <button class="submit-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none" type="button">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
